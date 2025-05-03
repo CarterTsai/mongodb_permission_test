@@ -53,6 +53,7 @@ db.createRole({
 });
 
 // 2. 只對 testData 做 insert & remove
+// remove 權限包含 deleteOne() 與 deleteMany()
 db.createRole({
   role: "writeDeleteOnly1",
   privileges: [
