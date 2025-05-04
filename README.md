@@ -118,6 +118,8 @@ db.testDataView.find()
 try {
    db.testData.insertOne({ name: "New User", age: 40, email: "newuser@example.com" });
    console.log("寫入資料到 testData 的資料");
+   db.testData.deleteOne({age:40})
+   db.testData.deleteMany({age:40})
    db.testData.deleteMany({});
    console.log("成功刪除 testData 的資料");
    db.testData.find(); // 應該會顯示權限錯誤
